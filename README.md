@@ -17,7 +17,7 @@ La qualité du code sera aussi évaluée.
 
 ### Le moteur de recherche
 
-Cette première partie doit se servir de l'[endpoint de recherche](https://wiki.openfoodfacts.org/API/Read/Search). Une simple recherche par nom suffit, la pagination est optionnelle. Le résultat de cette recherche doit apparaitre sous forme de liste avec les informations suivantes:
+Cette première partie doit se servir de l'[endpoint de recherche](https://wiki.openfoodfacts.org/API/Read/Search). Une simple recherche par nom suffit, la pagination est optionnelle. Le résultat de cette recherche doit apparaitre sous forme de liste avec les informations suivantes :
 - le nom du produit
 - la photo du produit
 - la liste de ses allergènes
@@ -26,7 +26,7 @@ Cette première partie doit se servir de l'[endpoint de recherche](https://wiki.
 ### L'affichage d'un produit
 
 La page d'un produit doit en n'afficher qu'un seul. Vous pouvez vous servir de cet [endpoint](https://wiki.openfoodfacts.org/API/Read/Product).
-Les informations requises sur le produit sont les suivantes:
+Les informations requises sur le produit sont les suivantes :
 - le nom du produit
 - la photo du produit
 - la liste de ses allergènes
