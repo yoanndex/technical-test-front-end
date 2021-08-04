@@ -20,7 +20,7 @@ La qualité du code sera aussi évaluée.
 Cette première partie doit se servir de l'[endpoint de recherche](https://wiki.openfoodfacts.org/API/Read/Search). Une simple recherche par nom suffit, la pagination est optionnelle. Le résultat de cette recherche doit apparaitre sous forme de liste avec les informations suivantes:
 - le nom du produit
 - la photo du produit
-- la liste de ses allergens
+- la liste de ses allergènes
 - un lien vers la page produit
 
 ### L'affichage d'un produit
@@ -29,7 +29,7 @@ La page d'un produit doit en n'afficher qu'un seul. Vous pouvez vous servir de c
 Les informations requises sur le produit sont les suivantes:
 - le nom du produit
 - la photo du produit
-- la liste de ses allergens
+- la liste de ses allergènes
   
 Vous pouvez compléter cette page avec d'autres informations issues du retour de l'API.
 
