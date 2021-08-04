@@ -10,7 +10,7 @@ Le but est d'évaluer le candidat sur sa manière de gérer des appels à une AP
 
 ## Consignes
 
-Vous allez faire un moteur de recherche très simple qui doit permettre de faire de rechercher des produits par nom, de les afficher dans une liste et de faire une page pour voir chaque produit.
+Vous allez faire un moteur de recherche très simple qui doit permettre de rechercher des produits par nom, de les afficher dans une liste et de faire une page pour voir chaque produit.
 Nous vous encourageons à utiliser [Create React App](https://github.com/facebook/create-react-app) avec [React Router](https://reactrouter.com/web/guides/quick-start).
 Le code doit être hébergé sur un gestionnaire de version git au choix. (exemples: github, gitlab, bitbucket)
 La qualité du code sera aussi évaluée.
