@@ -22,6 +22,12 @@ Cette première partie doit se servir de l'[endpoint de recherche](https://wiki.
 - la photo du produit : `image_front_small_url`
 - un lien vers la page produit : en utilisant `id`
 
+Vous pouvez utilisez l'URL suivante :
+
+```javascript
+`https://world.openfoodfacts.org/cgi/search.pl?search_terms=${searchTerm}&search_simple=1&action=process&fields=id%2Cproduct_name%2Cimage_front_small_url&json=1&page=1&page_size=24`
+```
+
 ### L'affichage d'un produit
 
 La page d'un produit doit en n'afficher qu'un seul. Vous pouvez vous servir de cet [endpoint](https://wiki.openfoodfacts.org/API/Read/Product).
@@ -31,6 +37,12 @@ Les informations requises sur le produit sont les suivantes :
 - la photo du produit : `image_front_url`
 - la liste de ses allergènes : `allergens_hierarchy`
 - ses ingrédients : `ingredients_text`
+
+Vous pouvez utilisez l'URL suivante :
+
+```javascript
+`https://world.openfoodfacts.org/api/v0/product/${code}.json?fields=product_name%2Ccategories%2Cimage_front_url%2Callergens_hierarchy%2Cingredients_text`
+```
 
 ## Notes
 
