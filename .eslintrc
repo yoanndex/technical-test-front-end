@@ -25,16 +25,18 @@
     "react"
   ],
   "rules": {
-    // Eslint
-    "arrow-body-style": [
-      "error",
-      "as-needed"
-    ],
     // Prettier do this
     "implicit-arrow-linebreak": "off",
     "comma-dangle": "off",
     "indent": "off",
     "no-trailing-spaces": "off",
+    "react/function-component-definition": [
+      1,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
     // Allow jsx syntax inside .js files for Tests
     "react/jsx-filename-extension": [
       1,
