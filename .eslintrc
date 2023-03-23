@@ -26,6 +26,7 @@
   ],
   "rules": {
     // Prettier do this
+    "react/no-unescaped-entities": "off",
     "implicit-arrow-linebreak": "off",
     "comma-dangle": "off",
     "indent": "off",

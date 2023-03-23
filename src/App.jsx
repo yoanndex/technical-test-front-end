@@ -1,9 +1,6 @@
 import React from 'react';
-import TestApi from './api/TestApi';
 import './App.css';
 
-const App = () => <div className="App">
-  <TestApi />
-</div >
+const App = () => <div className="App" />
 
 export default App;

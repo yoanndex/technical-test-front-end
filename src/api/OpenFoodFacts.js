@@ -6,8 +6,9 @@ import axios from 'axios';
  * @param {Number} pageSize number of products
  * @returns Object
  */
-export const getProducts = async (searchTerm, pageSize = 24) => {
-    const params = {
+export const getProducts = async ({ params }) => {
+    const { searchTerm, pageSize = 24 } = params;
+    const queryParams = {
         search_terms: searchTerm,
         search_simple: 1,
         action: 'process',
@@ -16,7 +17,7 @@ export const getProducts = async (searchTerm, pageSize = 24) => {
         page: 1,
         page_size: pageSize
     }
-    const { data } = await axios.get(`https://world.openfoodfacts.org/cgi/search.pl`, { params });
+    const { data } = await axios.get(`https://world.openfoodfacts.org/cgi/search.pl`, { params: queryParams });
     return data;
 }
 
@@ -25,10 +26,11 @@ export const getProducts = async (searchTerm, pageSize = 24) => {
  * @param {Number} code Number to identify the product
  * @returns Object
  */
-export const getProduct = async (code) => {
-    const params = {
+export const getProduct = async ({ params }) => {
+    const { code } = params;
+    const queryParams = {
         fields: 'product_name,categories,image_front_url,allergens_hierarchy,ingredients_text'
     }
-    const { data } = await axios.get(`https://world.openfoodfacts.org/api/v0/product/${code}.json`, { params });
+    const { data } = await axios.get(`https://world.openfoodfacts.org/api/v0/product/${code}.json`, { params: queryParams });
     return data;
 }
