@@ -4,14 +4,18 @@ import Product from 'components/Product/Product';
 import Products from 'components/Products/Products';
 
 import { getProduct, getProducts } from 'api/OpenFoodFacts';
-import Root from 'routes/root';
-
+import MainLayout from 'layouts/MainLayout';
+import Home from 'pages/Home';
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Root />,
+        element: <MainLayout />,
         children: [
+            {
+                path: "/",
+                element: <Home />
+            },
             {
                 path: "/products/:searchTerm",
                 loader: getProducts,
