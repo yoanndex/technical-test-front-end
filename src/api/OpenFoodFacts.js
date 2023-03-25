@@ -12,7 +12,7 @@ export const getProducts = async ({ params }) => {
         search_terms: searchTerm,
         search_simple: 1,
         action: 'process',
-        field: 'id,product_name,image_front_small_url',
+        fields: 'code,product_name_fr,image_front_url,generic_name_fr',
         json: 1,
         page: 1,
         page_size: pageSize
@@ -29,7 +29,7 @@ export const getProducts = async ({ params }) => {
 export const getProduct = async ({ params }) => {
     const { code } = params;
     const queryParams = {
-        fields: 'product_name,categories,image_front_url,allergens_hierarchy,ingredients_text'
+        fields: 'product_name,categories,image_front_url,allergens_hierarchy,ingredients_text_fr,generic_name_fr'
     }
     const { data } = await axios.get(`https://world.openfoodfacts.org/api/v0/product/${code}.json`, { params: queryParams });
     return data;

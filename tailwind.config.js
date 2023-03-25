@@ -6,5 +6,8 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    // eslint-disable-next-line import/no-extraneous-dependencies
+    require('@tailwindcss/line-clamp'),
+  ],
 }
