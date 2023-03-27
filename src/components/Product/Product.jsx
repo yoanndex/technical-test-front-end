@@ -1,30 +1,8 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-/**
- * Convert array of string to string with string transformation
- * @param {Array<String>} allergens 
- * @returns String
- */
-const allergensToString = (allergens) => allergens.map((allergen) => {
-    const regex = /[^:]*$/gm;
-    const str = allergen.match(regex);
-    return str && str[0] ? str[0] : allergen;
-}).join(', ');
-
-
-const Product = () => {
-    const { product } = useLoaderData();
-    const {
-        product_name: name,
-        image_front_url: image,
-        generic_name_fr: description,
-        ingredients_text_fr: ingredients,
-        allergens_hierarchy: allergens,
-        categories
-    } = product;
-    const strAllergens = allergensToString(allergens) || "Pas d'allergènes";
-    return <div className="min-w-screen bg-blue-600 flex items-center p-5 lg:p-10 overflow-hidden relative">
+const Product = ({ name, categories, image, description, allergens, ingredients }) =>
+    <div className="min-w-screen bg-blue-600 flex items-center p-5 lg:p-10 overflow-hidden relative">
         <div className="w-full max-w-6xl rounded bg-white shadow-xl p-10 lg:p-20 mx-auto text-gray-800 relative md:text-left">
             <h1 className="font-bold uppercase text-2xl mb-0">{name}</h1>
             <div className="text-xs mb-5">{categories}</div>
@@ -39,7 +17,7 @@ const Product = () => {
                         <p className="text-base font-bold">Descriptif du produit:</p>
                         <p className="text-base">{description}</p>
                         <p className="text-base font-bold mt-10 text-red-600">Allergènes:
-                            <span className="pl-1 font-normal">{strAllergens}</span>
+                            <span className="pl-1 font-normal">{allergens}</span>
                         </p>
                     </div>
                 </div>
@@ -52,6 +30,20 @@ const Product = () => {
             </div>
         </div>
     </div>
-};
+
+
+Product.propTypes = {
+    name: PropTypes.string.isRequired,
+    categories: PropTypes.string.isRequired,
+    image: PropTypes.string,
+    description: PropTypes.string.isRequired,
+    allergens: PropTypes.string,
+    ingredients: PropTypes.string.isRequired
+}
+
+Product.defaultProps = {
+    image: '',
+    allergens: ''
+}
 
 export default Product;

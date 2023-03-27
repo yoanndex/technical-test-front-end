@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBrowserRouter } from "react-router-dom";
-import Product from 'components/Product/Product';
+import Product from 'pages/Product';
 import Products from 'pages/Products';
 
 import { getProduct, getProducts } from 'api/OpenFoodFacts';

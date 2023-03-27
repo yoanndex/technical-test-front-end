@@ -3,7 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 
 import Card from 'components/Card/Card';
 
-const Home = () => {
+const Products = () => {
     const { products } = useLoaderData();
 
     return <div className="flex flex-wrap space-between gap-8">
@@ -26,4 +26,4 @@ const Home = () => {
     </div>
 }
 
-export default Home;
+export default Products;

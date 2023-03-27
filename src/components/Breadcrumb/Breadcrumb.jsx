@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 const Breadcrumb = ({ elements }) => <nav className="bg-grey-light w-full rounded-md">
     <ol className="list-reset flex">
         {
-            elements.map((el, index) => <>
-                <li key={el.url}>
+            elements.map((el, index) => <React.Fragment key={el.url}>
+                <li>
                     <Link
                         to={el.url}
                         className="text-primary transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700"
@@ -15,7 +15,7 @@ const Breadcrumb = ({ elements }) => <nav className="bg-grey-light w-full rounde
                 {index !== elements.length - 1 && <li>
                     <span className="mx-2 text-neutral-500">></span>
                 </li>}
-            </>)
+            </React.Fragment>)
         }
     </ol>
 </nav>
