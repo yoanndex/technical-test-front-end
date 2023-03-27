@@ -6,6 +6,7 @@ import Products from 'pages/Products';
 import { getProduct, getProducts } from 'api/OpenFoodFacts';
 import MainLayout from 'layouts/MainLayout';
 import Home from 'pages/Home';
+import NotFound from 'pages/NotFound';
 
 const router = createBrowserRouter([
     {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
                 element: <Product />
             }
         ]
+    },
+    {
+        path: '/*',
+        element: <NotFound />
     }
 ]);
 

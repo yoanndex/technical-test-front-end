@@ -25,6 +25,7 @@
     "react"
   ],
   "rules": {
+    "import/no-extraneous-dependencies": "off",
     "no-unused-expressions": "off",
     // Prettier do this
     "react/no-unescaped-entities": "off",
@@ -46,18 +47,6 @@
         "extensions": [
           ".js",
           "jsx"
-        ]
-      }
-    ],
-    // Allow import packages from Dev Dependencies in Tests files
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": [
-          "**/*.test.js",
-          "**/*.spec.js",
-          "**/setupTests.js",
-          "**/utils/tests/*.js"
         ]
       }
     ]

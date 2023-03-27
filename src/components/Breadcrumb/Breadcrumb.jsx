@@ -6,7 +6,7 @@ const Breadcrumb = ({ elements }) => <nav className="bg-grey-light w-full rounde
     <ol className="list-reset flex">
         {
             elements.map((el, index) => <>
-                <li>
+                <li key={el.url}>
                     <Link
                         to={el.url}
                         className="text-primary transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700"

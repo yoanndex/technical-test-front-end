@@ -9,7 +9,7 @@ const Header = () => {
     return <div
         onClick={goHome}
         aria-hidden="true"
-        className="container mt-12 px-6 mx-auto cursor-pointer"
+        className="container pt-12 px-6 mx-auto cursor-pointer"
         title="Retour à la page d'accueil"
     >
         <section className="mb-8 text-gray-800 text-center">
