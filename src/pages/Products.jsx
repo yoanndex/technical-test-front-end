@@ -5,6 +5,7 @@ import Card from 'components/Card/Card';
 
 const Home = () => {
     const { products } = useLoaderData();
+
     return <div className="flex flex-wrap space-between gap-8">
         {
             products.map(

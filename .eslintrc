@@ -25,6 +25,7 @@
     "react"
   ],
   "rules": {
+    "no-unused-expressions": "off",
     // Prettier do this
     "react/no-unescaped-entities": "off",
     "implicit-arrow-linebreak": "off",

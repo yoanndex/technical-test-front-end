@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+
 const Header = () => {
     const navigate = useNavigate();
     const goHome = useCallback(() => navigate('/'), []);

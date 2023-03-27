@@ -14,12 +14,12 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <Home />
+                element: <Home />,
             },
             {
                 path: "/products/:searchTerm",
                 loader: getProducts,
-                element: <Products />
+                element: <Products />,
             },
             {
                 path: "/product/:code",
